@@ -1,25 +1,96 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="112" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6kD-1K-yFZ">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QiushiCell" rowHeight="112" id="p8m-wD-7MK" customClass="QiushiCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p8m-wD-7MK" id="DhY-8I-seg">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumb_avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="7eH-Wu-ZDH">
+                                                    <rect key="frame" x="10" y="10" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="BcM-8h-Mgj"/>
+                                                        <constraint firstAttribute="width" constant="30" id="mWK-m8-o0j"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="隔壁老王" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260" translatesAutoresizingMaskIntoConstraints="NO" id="3N7-cr-Sar">
+                                                    <rect key="frame" x="48" y="10" width="260" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.60000002384185791" green="0.43492394699431264" blue="0.35847224230697972" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="窗前明月光，疑是地上霜。举头望明月，低头思故乡。" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="bM4-Ti-7UF">
+                                                    <rect key="frame" x="10" y="48" width="300" height="53"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.5" green="0.16523451625370583" blue="0.045088471322888346" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bM4-Ti-7UF" firstAttribute="top" secondItem="3N7-cr-Sar" secondAttribute="bottom" constant="8" id="79g-Dc-WZJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="bM4-Ti-7UF" secondAttribute="trailing" constant="10" id="Jsl-dZ-zIy"/>
+                                                <constraint firstItem="7eH-Wu-ZDH" firstAttribute="leading" secondItem="DhY-8I-seg" secondAttribute="leading" constant="10" id="XcZ-Q6-Kak"/>
+                                                <constraint firstItem="3N7-cr-Sar" firstAttribute="top" secondItem="DhY-8I-seg" secondAttribute="top" constant="10" id="Xqm-YI-yBi"/>
+                                                <constraint firstItem="3N7-cr-Sar" firstAttribute="leading" secondItem="7eH-Wu-ZDH" secondAttribute="trailing" constant="8" id="a9V-oG-2Fr"/>
+                                                <constraint firstItem="7eH-Wu-ZDH" firstAttribute="top" secondItem="DhY-8I-seg" secondAttribute="top" constant="10" id="aHA-su-84s"/>
+                                                <constraint firstAttribute="bottom" secondItem="bM4-Ti-7UF" secondAttribute="bottom" constant="10" id="bv0-hE-yNr"/>
+                                                <constraint firstAttribute="trailing" secondItem="3N7-cr-Sar" secondAttribute="trailing" constant="12" id="mPv-La-cq8"/>
+                                                <constraint firstItem="bM4-Ti-7UF" firstAttribute="top" secondItem="7eH-Wu-ZDH" secondAttribute="bottom" constant="8" id="ugU-uJ-sLj"/>
+                                                <constraint firstItem="bM4-Ti-7UF" firstAttribute="leading" secondItem="DhY-8I-seg" secondAttribute="leading" constant="10" id="yZ6-nU-JHM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="authorImage" destination="7eH-Wu-ZDH" id="Qq8-lo-oX2"/>
+                                            <outlet property="authorName" destination="3N7-cr-Sar" id="Kkm-A5-d8Y"/>
+                                            <outlet property="content" destination="bM4-Ti-7UF" id="Zea-ZD-TQd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6kD-1K-yFZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="E0M-47-wSZ"/>
+                            <constraint firstItem="6kD-1K-yFZ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="OCD-xU-sR6"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="6kD-1K-yFZ" secondAttribute="bottom" id="cPc-oE-uyj"/>
+                            <constraint firstAttribute="trailing" secondItem="6kD-1K-yFZ" secondAttribute="trailing" id="sgI-5X-2pc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="JTableView" destination="6kD-1K-yFZ" id="bt8-W6-wHz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="128" y="424"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="thumb_avatar.png" width="30" height="30"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
